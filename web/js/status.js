@@ -1,12 +1,13 @@
+var getStatusRequest = new XMLHttpRequest();
+var setStatusRequest = new XMLHttpRequest();
+
 window.onload = function(){
     getStatus();
 };
 
-var customStatusButton = document.getElementById('statusbutton');
+var customStatusButton = document.getElementById("statusbutton");
 customStatusButton.onclick = setStatus;
 
-var getStatusRequest = new XMLHttpRequest();
-var setStatusRequest = new XMLHttpRequest();
 
 function setStatus(){
     var preferredStatus = document.getElementById("statusinput").value;

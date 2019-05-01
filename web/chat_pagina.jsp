@@ -8,11 +8,18 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
-<h3>You are now : <b id="statusoutput"></b></h3>
+<h3>Je bent nu : <b id="statusoutput"></b></h3>
 <form>
     <label for="statusinput">je nieuwe status : </label>
     <input id="statusinput">
     <button id="statusbutton">change your status</button>
 </form>
+<h3>Vriendenlijst</h3>
+    <ul>
+    <c:forEach items="${user.vrienden}" var="vriend">
+        <li>${vriend.firstName} ${vriend.lastName} : ${vriend.status}</li>
+    </c:forEach>
+    </ul>
+
 </body>
 </html>
