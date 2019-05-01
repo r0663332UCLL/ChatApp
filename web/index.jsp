@@ -24,6 +24,7 @@
 </c:if> <c:choose>
 	<c:when test="${user!=null}">
 		<p>Welcome ${user.getFirstName()}!</p>
+		<jsp:include page="chat_pagina.jsp"/>
 		<form method="post" action="Controller?action=LogOut">
 			<p>
 				<input type="submit" id="logoutbutton" value="Log Out">
@@ -50,5 +51,6 @@
 	<jsp:include page="footer.jsp">
 		<jsp:param name="title" value="Home" />
 	</jsp:include>
+    <script type="text/javascript" src="js/status.js"></script>
 </body>
 </html>

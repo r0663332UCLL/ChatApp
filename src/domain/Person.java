@@ -17,14 +17,24 @@ public class Person {
 	private String firstName;
 	private String lastName;
 	private Role role;
+	private String status;
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
 
 	public Person(String userId, String password, String firstName,
-			String lastName,Role role) {
+				  String lastName, Role role) {
 		setUserId(userId);
 		setHashedPassword(password);
 		setFirstName(firstName);
 		setLastName(lastName);
 		setRole(role);
+        setStatus("online");
 	}
 
 	public Person(String userId, String password, String salt,
@@ -35,6 +45,7 @@ public class Person {
 		setFirstName(firstName);
 		setLastName(lastName);
 		setRole(role);
+		setStatus("online");
 	}
 
 	public Person() {
