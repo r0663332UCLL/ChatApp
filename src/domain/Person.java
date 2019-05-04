@@ -171,4 +171,8 @@ public class Person {
     public void setVrienden(List<Person> vrienden) {
         this.vrienden = vrienden;
     }
+
+    public void addFriend(Person person){
+	    this.vrienden.add(person);
+    }
 }

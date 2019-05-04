@@ -1,9 +1,9 @@
-var getStatusRequest = new XMLHttpRequest();
-var setStatusRequest = new XMLHttpRequest();
-
-window.onload = function(){
+window.onload = function () {
     getStatus();
 };
+
+var getStatusRequest = new XMLHttpRequest();
+var setStatusRequest = new XMLHttpRequest();
 
 var customStatusButton = document.getElementById("statusbutton");
 customStatusButton.onclick = setStatus;

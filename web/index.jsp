@@ -51,6 +51,6 @@
 	<jsp:include page="footer.jsp">
 		<jsp:param name="title" value="Home" />
 	</jsp:include>
-    <script type="text/javascript" src="js/status.js"></script>
+
 </body>
 </html>

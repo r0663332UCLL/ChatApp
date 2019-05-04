@@ -15,11 +15,16 @@
     <button id="statusbutton">change your status</button>
 </form>
 <h3>Vriendenlijst</h3>
-    <ul>
+    <ul id="vrienden">
     <c:forEach items="${user.vrienden}" var="vriend">
-        <li>${vriend.firstName} ${vriend.lastName} : ${vriend.status}</li>
+        <li>${vriend.firstName} ${vriend.lastName}: ${vriend.status}</li>
     </c:forEach>
     </ul>
-
-</body>
-</html>
+<h3>Voeg een vriend toe</h3>
+<form>
+    <label for="vriendinput">e-mail van je vriend : </label>
+    <input id="vriendinput">
+    <button id="addvriendbutton">voeg vriend toe</button>
+</form>
+<script type="text/javascript" src="js/status.js"></script>
+<script type="text/javascript" src="js/addfriend.js"></script>
