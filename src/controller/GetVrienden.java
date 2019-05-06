@@ -6,14 +6,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-public class GetStatus extends asyncHandler {
+public class GetVrienden extends asyncHandler {
     @Override
     public String handleRequest(HttpServletRequest request, HttpServletResponse response) throws IOException {
         Person user = (Person) request.getSession().getAttribute("user");
         if (user != null){
             response.setContentType("application/json");
-            String euhhh = user.getStatus();
-            response.getWriter().write(user.getStatus());
+            response.getWriter().write(friendsToJson(user.getVrienden()));
         }
         return null;
     }

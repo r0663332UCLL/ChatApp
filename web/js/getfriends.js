@@ -12,7 +12,7 @@ function getData() {
             var serverResponse = JSON.parse(vriendrequest.responseText);
             var vrienden = "";
             for (var i = 0; i < serverResponse.length; i++) {
-                vrienden = "<li" + serverResponse[i].firstName + " " + serverResponse[i].lastName + ": " + serverResponse[i].status + "</li>";
+                vrienden += "<li>" + serverResponse[i].firstName + " " + serverResponse[i].lastName + ": " + serverResponse[i].status + "</li>";
             }
             document.getElementById("vrienden").innerHTML = vrienden;
             setTimeout(getVrienden, 2000);

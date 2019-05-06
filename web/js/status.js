@@ -1,5 +1,6 @@
 window.onload = function () {
     getStatus();
+    getVrienden();
 };
 
 var getStatusRequest = new XMLHttpRequest();
@@ -7,7 +8,6 @@ var setStatusRequest = new XMLHttpRequest();
 
 var customStatusButton = document.getElementById("statusbutton");
 customStatusButton.onclick = setStatus;
-
 
 function setStatus(){
     var preferredStatus = document.getElementById("statusinput").value;
