@@ -23,11 +23,11 @@ function setStatus(){
 
 function getStatus () {
     getStatusRequest.open("GET", "Controller?action=GetStatus", true);
-    getStatusRequest.onreadystatechange = getData;
+    getStatusRequest.onreadystatechange = getStatusData;
     getStatusRequest.send(null);
 }
 
-function getData() {
+function getStatusData() {
     if(getStatusRequest.status === 200){
         if(getStatusRequest.readyState === 4){
             document.getElementById("statusoutput").innerText = getStatusRequest.responseText;

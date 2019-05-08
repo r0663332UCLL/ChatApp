@@ -14,6 +14,7 @@ public class AddVriend extends asyncHandler {
         if (user != null){
             Person nieuweVriend = getPersonService().getPerson(request.getParameter("vriend"));
             user.addFriend(nieuweVriend);
+            nieuweVriend.addFriend(user);
         }
         return null;
     }

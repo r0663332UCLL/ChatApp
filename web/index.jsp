@@ -48,6 +48,7 @@
 	</c:otherwise>
 </c:choose> </main>
 
+	<jsp:include page="blog.jsp"/>
 	<jsp:include page="footer.jsp">
 		<jsp:param name="title" value="Home" />
 	</jsp:include>

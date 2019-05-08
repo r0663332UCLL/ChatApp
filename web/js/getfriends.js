@@ -2,11 +2,11 @@ var vriendrequest = new XMLHttpRequest();
 
 function getVrienden() {
     vriendrequest.open("GET", "Controller?action=GetVrienden", true);
-    vriendrequest.onreadystatechange = getData;
+    vriendrequest.onreadystatechange = getVriendData;
     vriendrequest.send();
 }
 
-function getData() {
+function getVriendData() {
     if (vriendrequest.status === 200) {
         if (vriendrequest.readyState === 4) {
             var serverResponse = JSON.parse(vriendrequest.responseText);
