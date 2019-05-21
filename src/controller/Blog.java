@@ -5,6 +5,7 @@ import javax.websocket.OnMessage;
 import javax.websocket.OnOpen;
 import javax.websocket.Session;
 import javax.websocket.server.ServerEndpoint;
+import java.io.IOException;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
@@ -25,10 +26,16 @@ public class Blog {
 
     @OnMessage
     public void OnMessage(Session session, String message){
-        //todo
+        sendToEveryone(message);
     }
 
     public void sendToEveryone(String comment){
-        //todo
+        for(Session s : sessions){
+            try {
+                s.getBasicRemote().sendText(comment);
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
+        }
     }
 }
