@@ -13,12 +13,16 @@
     <input id="statusinput">
     <button id="statusbutton">change your status</button>
 <h3>Vriendenlijst</h3>
+    <button id="toggle-vrienden">Collapse/expand</button>
     <ul id="vrienden"></ul>
+<div id="chatvenster"></div>
 <h3>Voeg een vriend toe</h3>
     <label for="vriendinput">e-mail van je vriend : </label>
     <input id="vriendinput">
     <button id="addvriendbutton">voeg vriend toe</button>
 
+<script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/status.js"></script>
 <script type="text/javascript" src="js/addfriend.js"></script>
 <script type="text/javascript" src="js/getfriends.js"></script>
+<script type="text/javascript" src="js/chat.js"></script>

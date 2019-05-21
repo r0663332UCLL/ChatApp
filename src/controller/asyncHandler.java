@@ -4,6 +4,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
+
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import domain.Person;
 
 public abstract class asyncHandler extends RequestHandler {
@@ -16,7 +19,8 @@ public abstract class asyncHandler extends RequestHandler {
         for (Person person : persons){
             json += "{\"firstName\":\"" + person.getFirstName() + "\"," +
                     "\"lastName\":\"" + person.getLastName() + "\"," +
-                    "\"status\":\"" + person.getStatus() + "\"}";
+                    "\"status\":\"" + person.getStatus() + "\"," +
+                    "\"userId\":\"" + person.getUserId() + "\"}";
             i++;
             if (persons.size() != i){
                 json += ",";
@@ -24,5 +28,10 @@ public abstract class asyncHandler extends RequestHandler {
         }
         json += "]";
         return json;
+    }
+
+    public String conversationToJson(List list) throws JsonProcessingException {
+        ObjectMapper mapper = new ObjectMapper();
+        return mapper.writeValueAsString(list);
     }
 }
