@@ -17,9 +17,27 @@ public class Person {
 	private String salt;
 	private String firstName;
 	private String lastName;
+	private Gender gender;
+	private int age;
 	private Role role;
 	private String status;
 	private List<Person> vrienden;
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	public Gender getGender() {
+		return gender;
+	}
+
+	public void setGender(Gender gender) {
+		this.gender = gender;
+	}
 
 	public String getStatus() {
 		return status;

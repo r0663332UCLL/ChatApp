@@ -13,7 +13,7 @@ public abstract class asyncHandler extends RequestHandler {
     @Override
     public abstract String handleRequest(HttpServletRequest request, HttpServletResponse response) throws IOException;
 
-    public String friendsToJson(List<Person> persons){
+    public String usersToJson(List<Person> persons){
         String json = "[";
         int i = 0;
         for (Person person : persons){

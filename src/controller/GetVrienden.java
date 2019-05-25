@@ -12,7 +12,7 @@ public class GetVrienden extends asyncHandler {
         Person user = (Person) request.getSession().getAttribute("user");
         if (user != null){
             response.setContentType("application/json");
-            response.getWriter().write(friendsToJson(user.getVrienden()));
+            response.getWriter().write(usersToJson(user.getVrienden()));
         }
         return null;
     }
